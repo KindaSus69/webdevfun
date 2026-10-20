@@ -1,9 +1,15 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import Header from './coreComponents/header/header.jsx'
+
+import Navbar from './coreComponents/navbar/navbar.jsx';
+import Viewport from './coreComponents/viewport/viewport.jsx';
+
+let currentPage = "index";
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Header></Header>
-  </StrictMode>,
+    <Viewport>
+    </Viewport>
+    <Navbar></Navbar>
+  </StrictMode>
 )
