@@ -1,11 +1,9 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import Greeting from './App.jsx'
-
-console.log("hello world!")
+import Header from './coreComponents/header/header.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-  <Greeting></Greeting>
+    <Header></Header>
   </StrictMode>,
 )
