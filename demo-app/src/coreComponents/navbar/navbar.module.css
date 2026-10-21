@@ -15,4 +15,10 @@
     background-color: var(--black);
     color: whitesmoke;
     border-style: none;
+    font-weight: lighter;
 }
+
+.navButtonActive {
+    font-weight: bold;
+}
+

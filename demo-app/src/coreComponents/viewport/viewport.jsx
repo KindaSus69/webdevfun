@@ -14,10 +14,11 @@ export default function Viewport({pageId}){
         let PageContents;
         console.log("loading page: '",Id,"'")
 
+
         try {
            PageContents = pageRegistry[Id];
 
-           if (!PageContents) {
+           if (!PageContents || typeof PageContents !== "function") {
             throw new Error("404 page not found!");
            }
 
@@ -26,10 +27,12 @@ export default function Viewport({pageId}){
             PageContents = () => {return(<strong>404 not found!</strong>)};
         }
         
-        return <PageContents />;
+        return <PageContents/>;
     }
 
     return (
-        loadPage(pageId)
+        <div className = {"app-viewport"} style={{flex:"1"}}>
+            {loadPage(pageId)}
+        </div>
     );
 } 

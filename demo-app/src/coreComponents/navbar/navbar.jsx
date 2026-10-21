@@ -7,7 +7,8 @@ const navItems = [
     { id: "Settings", label: "Settings" }
 ];
 
-export default function Navbar({ setPage }) {
+export default function Navbar({ currentPage, setPage }) {
+
     return (
        <div className={styles.navbar}>
             
@@ -15,7 +16,11 @@ export default function Navbar({ setPage }) {
                 <button 
                     key={item.id}
                     onClick={() => setPage(item.id)} 
-                    className={styles.navButton}
+                    className={
+                        `${styles.navButton}
+                        ${currentPage == item.id ? styles.navButtonActive : ''}`
+                    }
+                    
                 
                     >{item.label}
                 </button>
