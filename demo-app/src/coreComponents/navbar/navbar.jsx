@@ -1,10 +1,25 @@
 import styles from './navbar.module.css'
 
-export default function Navbar() {
+const navItems = [
+    { id: "index", label: "For you" },
+    { id: "Friends", label: "Friends" },
+    { id: "Library", label: "Library" },
+    { id: "Settings", label: "Settings" }
+];
+
+export default function Navbar({ setPage }) {
     return (
-       <footer className={styles.navbar}>
-            test
-            <div>test</div>
-       </footer>
+       <div className={styles.navbar}>
+            
+            {navItems.map(item => (
+                <button 
+                    key={item.id}
+                    onClick={() => setPage(item.id)} 
+                    className={styles.navButton}
+                
+                    >{item.label}
+                </button>
+            ))}
+       </div>
     );
 }

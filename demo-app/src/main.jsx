@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <Viewport pageId={currentPage} />
-      <Navbar navPage={setPage} />
+      <Navbar setPage={setPage} />
     </>
   );
 }
