@@ -1,8 +1,11 @@
 .navbar {
     width: 100%;
-    height: 2rem;
+    height: 2.5rem;
+    padding-top: 2px;
 
-    background-color: #756060;
+    background-color: var(--color-black-900);
+
+    border-radius: 5px;
 
     display: flex;
     flex-direction: row;
@@ -12,13 +15,22 @@
 
 .navButton {
     flex: 1;
-    background-color: var(--black);
-    color: whitesmoke;
+    padding: 5px;
+    color: var(--color-white);
     border-style: none;
     font-weight: lighter;
+    background-color: transparent;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    filter: opacity(.5);
+    
 }
 
 .navButtonActive {
+    transition: background-color .1s;
     font-weight: bold;
+    filter: opacity(1);
 }
 

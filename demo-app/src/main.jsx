@@ -4,8 +4,9 @@ import Navbar from './coreComponents/navbar/navbar.jsx';
 import Viewport from './coreComponents/viewport/viewport.jsx';
 
 
+
 function App() {
-  const [currentPage, setPage] = useState("404");
+  const [currentPage, setPage] = useState("index");
 
   return (
     <>
